@@ -2,14 +2,11 @@ with open("Day_1/input.txt", "r") as file:
     lines = [line.strip() for line in file]
 
 nums = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine']
-
 total = 0
-
 for i in range(len(lines)):
     line = lines[i]
     val = 0
     found = False
-
     for c in range(len(line)):
         if line[c].isdigit():
             val = int(line[c]) * 10
@@ -23,7 +20,6 @@ for i in range(len(lines)):
                     break
         if found:
             break
-
     if found:
         found = False
         for c in range(len(line)-1, -1, -1):
@@ -39,8 +35,7 @@ for i in range(len(lines)):
                         break
             if found:
                 break
-    
     total += val
 
-print(total)
 file.close()
+print(total)
